@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="GradleApps">
+  <template name="gam2upload" value="&#10;apply plugin: 'maven'&#10;&#10;group = &quot;eoe.wangaho&quot;&#10;version = &quot;1.1.3&quot;&#10;&#10;&#10;uploadArchives {&#10;    repositories {&#10;        mavenDeployer {&#10;            repository(url: &quot;file://${System.env.HOME}/.m2/repository/&quot;)&#10;        }&#10;    }&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Robolectric">
+  <template name="rbhttpsetup" value="Robolectric.setDefaultHttpResponse(200, &quot;OK&quot;);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="rbsdk" value="@Config(emulateSdk = 18)" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="rbXMLBuildscript" value="classpath 'org.robolectric.gradle:gradle-android-test-plugin:0.10.+'" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="rbXMLGradle" value="&#10;apply plugin: 'android'&#10;apply plugin: 'android-test'&#10;&#10;android {&#10;    packagingOptions {&#10;        exclude 'LICENSE.txt'&#10;        exclude 'META-INF/LICENSE'&#10;        exclude 'META-INF/LICENSE.txt'&#10;        exclude 'META-INF/NOTICE'&#10;    }&#10;    compileSdkVersion 19&#10;    buildToolsVersion &quot;19.0.1&quot;&#10;&#10;    defaultConfig {&#10;        minSdkVersion 7&#10;        targetSdkVersion 19&#10;        testInstrumentationRunner &quot;com.google.android.apps.common.testing.testrunner.GoogleInstrumentationTestRunner&quot;&#10;    }&#10;    buildTypes {&#10;        release {&#10;            runProguard false&#10;        }&#10;    }&#10;&#10;    sourceSets {&#10;        androidTest {&#10;            setRoot('src/test')&#10;        }&#10;    }&#10;}&#10;&#10;androidTest {&#10;    include '**/*Test.class'&#10;    exclude '**/espresso/**/*.class'&#10;}&#10;&#10;dependencies {&#10;    // Espresso&#10;    androidTestCompile files('lib/espresso-1.1.jar', 'lib/testrunner-1.1.jar', 'lib/testrunner-runtime-1.1.jar')&#10;    androidTestCompile 'com.google.guava:guava:14.0.1',&#10;            'com.squareup.dagger:dagger:1.1.0',&#10;            'org.hamcrest:hamcrest-integration:1.1',&#10;            'org.hamcrest:hamcrest-core:1.1',&#10;            'org.hamcrest:hamcrest-library:1.1'&#10;&#10;    androidTestCompile('junit:junit:4.11') {&#10;        exclude module: 'hamcrest-core'&#10;    }&#10;    androidTestCompile('org.robolectric:robolectric:2.2') {&#10;        exclude module: 'classworlds'&#10;        exclude module: 'maven-artifact'&#10;        exclude module: 'maven-artifact-manager'&#10;        exclude module: 'maven-error-diagnostics'&#10;        exclude module: 'maven-model'&#10;        exclude module: 'maven-plugin-registry'&#10;        exclude module: 'maven-profile'&#10;        exclude module: 'maven-project'&#10;        exclude module: 'maven-settings'&#10;        exclude module: 'nekohtml'&#10;        exclude module: 'plexus-container-default'&#10;        exclude module: 'plexus-interpolation'&#10;        exclude module: 'plexus-utils'&#10;        exclude module: 'wagon-file'&#10;        exclude module: 'wagon-http-lightweight'&#10;        exclude module: 'wagon-http-shared'&#10;        exclude module: 'wagon-provider-api'&#10;    }&#10;    androidTestCompile 'com.squareup:fest-android:1.0.+'&#10;}&#10;&#10;apply plugin: 'idea'&#10;&#10;idea {&#10;    module {&#10;        testOutputDir = file('build/test-classes/debug')&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+</templateSet>
+

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Androidannotations">
+  <template name="aaEActivity" value="@EActivity(R.layout.$EXPR$)" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="false" />
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_EXPRESSION" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="false" />
+    </context>
+  </template>
+  <template name="aaXMLGradle" value="&#10;apply plugin: 'android'&#10;apply plugin: 'android-apt'&#10;&#10;&#10;def AAVersion = '3.0.1'&#10;def AQVersion = '0.24.3'&#10;&#10;repositories {&#10;    mavenCentral()&#10;    mavenLocal()&#10;}&#10;&#10;dependencies {&#10;    apt &quot;org.androidannotations:androidannotations:$AAVersion&quot;&#10;    compile &quot;org.androidannotations:androidannotations-api:$AAVersion&quot;&#10;    compile &quot;com.googlecode.android-query:android-query:$AQVersion&quot;&#10;&#10;    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'&#10;&#10;    compile 'com.android.support:support-v4:+'&#10;&#10;    compile fileTree(dir: 'libs', include: '*.jar')&#10;}&#10;&#10;apt {&#10;    arguments {&#10;        androidManifestFile variant.processResources.manifestFile&#10;        resourcePackageName '$EXPR$'&#10;&#10;        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName&#10;        // resourcePackageName android.defaultConfig.packageName&#10;&#10;        // You can set optional annotation processing options here, like these commented options:&#10;        // logLevel 'INFO'&#10;        // logFile '/var/log/aa.log'&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="aaXMLBuildscript" value="buildscript {&#10;    repositories {&#10;        mavenCentral()&#10;    }&#10;    dependencies {&#10;        classpath 'com.android.tools.build:gradle:0.9.+'&#10;&#10;        // the latest version of the android-apt plugin&#10;        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.1'&#10;    }&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="aaViewClick" value="    @Click(R.id.$EXPR$)&#10;    void $EXPR$OnClick(View view) {&#10;        &#10;    }" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaMethodStartactivity" value="  context.startActivity(&#10;          $EXPR$_.intent(context).get()&#10;                                .putExtra(&quot;name&quot;, type.getName()).putExtra(&quot;type&quot;, type.ordinal())&#10;                                .putExtra(ActionBarActivity.GD_ACTION_BAR_TITLE, type.getName())&#10;                                .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)&#10;                );" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaAfterviews" value="    @AfterViews&#10;    protected void calledAfterViewInjection() {&#10;      &#10;    }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaApp" value="    @App&#10;    public $EXPR$ $EXPR$;&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaEApplication" value="@EApplication" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaRootcontext" value="    @RootContext&#10;    Context mContext;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaAfterInject" value=" @AfterInject&#10;    void calledAfterInjection() {&#10;    }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaLayoutInflater" value="$EXPR$ = LayoutInflater.from(mContext).inflate(R.layout.$EXPR$, null);" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaEFragment" value="@EFragment(R.layout.$EXPR$)" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaItemClickByListXXX" value="@ItemClick&#10;    public void listItemClicked(int position) {&#10;    }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaEViewGroup" value="@EViewGroup(R.layout.$EXPR$)" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="aaGetViewByAdapter" value="        $EXPR$ view;&#10;        if (convertView == null) {&#10;            view = $EXPR$_.build(context);&#10;        } else {&#10;            view = ($EXPR$) convertView;&#10;        }&#10;&#10;        view.bind(mLocations[position]);&#10;&#10;        return view;" toReformat="false" toShortenFQNames="true">
+    <variable name="EXPR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="true" />
+      <option name="JAVA_STRING" value="true" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+</templateSet>
+
