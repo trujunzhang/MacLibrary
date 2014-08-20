@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="AndroidCommons">
+  <template name="adpermission" value="    &lt;!-- Required  一些系统要求的权限，如访问网络等--&gt;&#10;    &lt;uses-permission android:name=&quot;com.xinma.enterprisetemplate.permission.JPUSH_MESSAGE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.RECEIVE_USER_PRESENT&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.WAKE_LOCK&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.READ_PHONE_STATE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.WRITE_EXTERNAL_STORAGE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.WRITE_SETTINGS&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.MOUNT_UNMOUNT_FILESYSTEMS&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;&#10;    &lt;uses-permission android:name=&quot;android.permission.SYSTEM_ALERT_WINDOW&quot;/&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
+
