@@ -7,5 +7,24 @@
       <option name="XML_TEXT" value="true" />
     </context>
   </template>
+  <template name="agsupportv4" value="    compile 'com.android.support:support-v4:+'&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="aglibs" value="compile fileTree(dir: 'libs', include: '*.jar')" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="GROOVY" value="true" />
+      <option name="GROOVY_EXPRESSION" value="true" />
+      <option name="GROOVY_STATEMENT" value="true" />
+      <option name="GROOVY_DECLARATION" value="true" />
+    </context>
+  </template>
 </templateSet>
 
